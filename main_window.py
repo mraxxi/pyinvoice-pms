@@ -150,7 +150,7 @@ class InvoiceForm(QWidget):
         total_layout.addWidget(total_label)
 
         # Total display
-        self.total_display = QLineEdit("Rp 0.00")
+        self.total_display = QLineEdit("Rp 0")
         self.total_display.setReadOnly(True)
         self.total_display.setFixedWidth(config.LINE_ITEM_FIELD_WIDTHS['subtotal'])
         self.total_display.setAlignment(Qt.AlignRight | Qt.AlignVCenter)
@@ -210,7 +210,7 @@ class InvoiceForm(QWidget):
             number=len(self.line_item_widgets) + 1,
             description="",
             amount=config.DEFAULT_QUANTITY,
-            price=0.0
+            price=0
         )
 
         # Create widget

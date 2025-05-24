@@ -15,10 +15,10 @@ class LineItem:
     number: int
     description: str
     amount: int
-    price: float
+    price: int
 
     @property
-    def subtotal(self) -> float:
+    def subtotal(self) -> int:
         """Calculate and return the subtotal (amount * price)."""
         return self.amount * self.price
 
@@ -96,7 +96,7 @@ class Invoice:
             number=1,
             description="",
             amount=config.DEFAULT_QUANTITY,
-            price=0.0
+            price=0
         )
 
         return cls(
